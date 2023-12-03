@@ -1,14 +1,15 @@
 import { BrowserRouter as Router, Routes , Route } from "react-router-dom"
 import Navbar from "./compoments/Navbar"
+import Flights from "./compoments/pages/Flights"
 function App() {
 
   return (
     <>
       <Router>
         <Navbar/>
-        <Routes b>
+        <Routes>
           <Route path="/" element={<div>Home</div>}></Route>
-          <Route path="/flights" element={<div>Flights</div>}></Route>
+          <Route path="/flights" element={<Flights/>}></Route>
         </Routes>
       </Router>
     </>
