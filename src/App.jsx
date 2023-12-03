@@ -6,8 +6,9 @@ function App() {
     <>
       <Router>
         <Navbar/>
-        <Routes>
+        <Routes b>
           <Route path="/" element={<div>Home</div>}></Route>
+          <Route path="/flights" element={<div>Flights</div>}></Route>
         </Routes>
       </Router>
     </>
