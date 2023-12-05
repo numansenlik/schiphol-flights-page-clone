@@ -209,3 +209,324 @@ li {
 }
 
 /* !Header Section End  */
+
+
+/* !Fligts Section Start */
+.fligts {
+    display: flex;
+    margin-top: 56px;
+    flex-direction: column;
+
+    .fligts-departures-container {
+        width: 990px;
+        margin: 0 auto;
+
+        .fligts-header {
+            display: flex;
+            position: relative;
+
+            .title {
+                width: 430px;
+                font-size: 56px;
+                background-image: linear-gradient(90deg, #964acd 0%, #6759ff 50%, #1b60db 100%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                color: transparent;
+                line-height: 1;
+            }
+
+            .fligts-form {
+                position: absolute;
+                bottom: -18px;
+                display: flex;
+                width: 650px;
+                justify-content: space-between;
+
+                & select {
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
+                    background: #fff url(../assets/svg/arrow.svg) no-repeat right 16px top 50%;
+                    background-color: #fff;
+                    border: 1px solid #e9e8ed;
+                    border-bottom-color: #948fa7;
+                    border-radius: 0;
+                    box-shadow: 0 4px 12px rgba(20, 18, 81, 0);
+                    color: #1b60db;
+                    font-size: 16px;
+                    height: 48px;
+                    padding: 0 56px 0 20px;
+                    transition: background-color 150ms ease-in-out, box-shadow 150ms ease-in-out, color 150ms ease-in-out;
+
+                    &:focus-within {
+                        border-bottom-color: #1b60db;
+                        box-shadow: 0 4px 12px rgba(20, 18, 81, .2);
+                        outline: 0;
+                    }
+
+                }
+
+                .search-input {
+                    display: flex;
+                    position: relative;
+                    border: 1px solid #e9e8ed;
+                    border-bottom-color: #948fa7;
+                    box-shadow: 0 4px 12px rgba(20, 18, 81, 0);
+                    align-items: center;
+                    transition: background-color 150ms ease-in-out, box-shadow 150ms ease-in-out, color 150ms ease-in-out;
+
+                    &:focus-within {
+                        border-bottom-color: #1b60db;
+                        box-shadow: 0 4px 12px rgba(20, 18, 81, .2);
+                        outline: 0;
+                    }
+
+                    & input {
+                        padding: 12px 20px;
+                        transition: box-shadow 150ms ease-in-out;
+                        width: 386px;
+                        height: 48px;
+                    }
+
+                    & button {
+                        align-items: center;
+                        color: #1b60db;
+                        display: inline-flex;
+                        justify-content: center;
+                        padding: 8px;
+                        height: 100%;
+                        width: 48px;
+                        background-color: transparent;
+                        font-size: 18px;
+
+                        &:hover {
+                            background-color: #1b60db;
+                            color: #fff;
+                        }
+                    }
+
+
+                }
+            }
+        }
+
+        .fligts-selection {
+            display: flex;
+            margin-top: 90px;
+
+            & div {
+                font-size: 16px;
+                color: #1b60db;
+                padding: 8px 40px;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: #1b60db;
+                    color: #fff;
+                }
+
+                &.active {
+                    border-bottom: 0.25rem solid #1b60db;
+                    font-weight: bold;
+                    cursor: default;
+
+                    &:hover {
+                        background-color: #fff;
+                        color: #1b60db;
+                    }
+                }
+            }
+        }
+    }
+
+    .fligts-article-container {
+        background-color: #f3f7fd;
+        padding: 32px 0;
+
+        .fligts-cards {
+            width: 990px;
+            margin: 0 auto;
+
+            .flights-prev-button,
+            .flights-next-button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                color: #1b60db;
+                height: 48px;
+                background-color: #fff;
+                box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .1);
+                transition: box-shadow 150ms ease-in-out;
+                margin-top: 16px;
+
+                & span {
+                    color: #1b60db;
+
+                }
+
+                &:hover {
+                    box-shadow: 0px 2px 20px -3px rgba(0, 0, 0, 0.12);
+                    text-decoration: underline;
+                    text-underline-offset: 7px;
+                }
+            }
+
+            .flights-daybreak {
+                margin: 24px 0 12px 0;
+            }
+
+            .flights-cards-container {
+                .flights-card {
+                    padding: 20px;
+                    width: 100%;
+                    background-color: #fff;
+
+                    &:hover {
+                        box-shadow: 0px 2px 20px -3px rgba(0, 0, 0, 0.12);
+                        .card-name{
+                            color: #141251;
+                            text-decoration: underline;
+                            text-underline-offset: 5px;
+                        }
+
+                    }
+
+                    .card-article {
+                        position: relative;
+
+
+                        .article {
+                            display: flex;
+
+                            .card-time {
+                                padding-top: 8px;
+                                margin-bottom: 8px;
+                                width: 17%;
+
+                                .time-scheduled {
+                                    color: #141251;
+                                    font-size: 16px;
+                                    list-style: disc;
+                                    margin-right: 8px;
+                                    position: relative;
+
+                                    &.active::before {
+                                        content: "";
+                                        background-color: #d0021b;
+                                        display: block;
+                                        height: 2px;
+                                        left: 0;
+                                        outline: 0.5px solid #fff;
+                                        position: absolute;
+                                        right: 0;
+                                        top: 50%;
+                                        transform: translateY(-20%);
+                                    }
+                                }
+
+                                .time-delayed {
+                                    font-size: 16px;
+                                    color: #d0021b;
+                                }
+                            }
+
+                            .card-name {
+                                display: flex;
+                                flex-direction: column;
+                                border: 1px dashed #c0becc;
+                                border-width: 0 1px;
+                                margin-right: 20px;
+                                padding: 8px 20px 0;
+                                width: 37%;
+                                line-height: 1.25;
+
+                                .card-flight-airport {
+                                    color: #141251;
+                                    font-size: 16px;
+                                    font-weight: 600;
+                                }
+
+                                .detail {
+                                    display: flex;
+                                    align-items: center;
+                                    position: absolute;
+                                    right: 0;
+                                    top: 0;
+
+                                    & span {
+                                        color: #1b60db;
+                                        font-size: 16px;
+                                    }
+
+                                }
+
+                                .card-flight-number {
+                                    font-size: 16px;
+                                    margin-top: 8px;
+
+                                }
+                            }
+
+                            .card-gate-state {
+                                margin-bottom: 8px;
+                                padding-top: 8px;
+                                & p {
+                                    font-size: 16px;
+                                    padding: 4px 8px;
+                                    border-radius: 4px;
+                                    line-height: 1;
+
+                                    &.red {
+                                        font-size: 12px;
+                                        font-weight: 600;
+                                        color: #fff;
+                                        background-color: #d0021b;
+                                    }
+
+                                    &.blue {
+                                        font-size: 12px;
+                                        font-weight: 600;
+                                        color: #fff;
+                                        background-color: #141251;
+                                    }
+                                }
+                            }
+                        }
+
+                        .similer-code {
+                            display: none;
+
+                            &.active {
+                                display: block;
+                                margin-top: 20px;
+                                padding: 16px 0 1px 0;
+                                border-top: 1px dashed #c0becc;
+                                line-height: 1.4;
+                                & p {
+                                    font-size: 16px;
+                                    word-spacing: 2px;
+
+                                    & span {
+                                        font-size: 16px;
+
+                                        &::after {
+                                            content: " /";
+                                            font-size: 13.92px;
+                                        }
+
+                                        &:last-child::after {
+                                            content: "";
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* !Fligts Section End */
